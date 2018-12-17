@@ -1,0 +1,16 @@
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Saskes_Test.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Saskes_Test.pdb
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Saskes.exe
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Saskes.pdb
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Saskes.exe.config
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\obj\Debug\Saskes_Test.csprojResolveAssemblyReference.cache
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\obj\Debug\Saskes_Test.csproj.CoreCompileInputs.cache
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\obj\Debug\Saskes_Test.dll
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes_Test\obj\Debug\Saskes_Test.pdb

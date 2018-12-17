@@ -68,16 +68,9 @@ namespace Saskes
             Program.gameLogic.InitGame();
         }
 
-        public void setTurnLabel(TileType type, bool win)
+        public void setTurnLabel(string text)
         {
-            if (win)
-            {
-                turnLabel.Text = type.ToString() + " has won!";
-            }
-            else
-            {
-                turnLabel.Text = type.ToString();
-            }
+             turnLabel.Text = text;
         }
     }
 }

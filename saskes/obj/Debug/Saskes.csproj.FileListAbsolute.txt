@@ -18,3 +18,13 @@ C:\Users\Pralo\Desktop\Saskes\Saskes\obj\Debug\Saskes.csproj.GenerateResource.ca
 C:\Users\Pralo\Desktop\Saskes\Saskes\obj\Debug\Saskes.csproj.CoreCompileInputs.cache
 C:\Users\Pralo\Desktop\Saskes\Saskes\obj\Debug\Saskes.exe
 C:\Users\Pralo\Desktop\Saskes\Saskes\obj\Debug\Saskes.pdb
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.csprojResolveAssemblyReference.cache
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.MainForm.resources
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.Properties.Resources.resources
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.csproj.GenerateResource.Cache
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.csproj.CoreCompileInputs.cache
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.exe
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\obj\Debug\Saskes.pdb
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\bin\Debug\Saskes.exe.config
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\bin\Debug\Saskes.exe
+C:\Users\Jumoras\Dropbox\School\5sem\vgtusaskes\vgtusaskes\Saskes\bin\Debug\Saskes.pdb

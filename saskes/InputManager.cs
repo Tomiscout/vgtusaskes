@@ -23,7 +23,7 @@ namespace Saskes
                 }
                 else
                 {
-                    Program.gameLogic.processMove((Tile) lastPress.Tag, (Tile)btn.Tag);
+                    Program.gameLogic.processMove((ITile) lastPress.Tag, (ITile)btn.Tag);
                     map.selectTile(lastPress);
                     map.selectTile(btn);
                     lastPress = null;

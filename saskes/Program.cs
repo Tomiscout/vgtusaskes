@@ -15,7 +15,7 @@ namespace Saskes
         [STAThread]
         static void Main()
         {
-            gameLogic = new GameLogic();
+            gameLogic = new GameLogic(new GameMap(8,8));
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -7,19 +7,28 @@ namespace Saskes
 {
     public class GameMap
     {
-        public Tile[,] tiles { get; }
-        private Bitmap redImg, blackImg;
+        public ITile[,] tiles { get; }
+        private static Bitmap redImg, blackImg;
         private Color blackColor = Color.DarkGray, selectColor = Color.Bisque;
 
+        public static Image getRedImage()
+        {
+            return redImg;
+        }
+
+        public static Image getBlackImage()
+        {
+            return blackImg;
+        }
         public GameMap(int x, int y)
         {
-            tiles = new Tile[y,x];
+            tiles = new ITile[y,x];
 
             for (int i = 0; i < y; i++)
             {
                 for (int u = 0; u < x; u++)
                 {
-                    tiles[i,u] = new Tile(TileType.None, u, i);
+                    tiles[i,u] = new EmptyTile(u, i);
                 }
             }
 
@@ -46,32 +55,75 @@ namespace Saskes
             return false;
         }
 
-        public void setTile(Tile tile)
+        public void setTile(ITile tile)
         {
-            tiles[tile.y, tile.x] = tile;
-            Button btn = getUiButton(tile.x, tile.y);
+            tiles[tile.GetY(), tile.GetX()] = tile;
+            Button btn = getUiButton(tile.GetX(), tile.GetY());
 
-            if (tile.type == TileType.None)
+            if (Program.mainForm != null)
             {
-                btn.Image = null;
-            }
-            else if (tile.type == TileType.Black)
-            {
-                btn.Image = blackImg;
-            }else if (tile.type == TileType.Red)
-            {
-                btn.Image = redImg;
+                if (tile.GetTileType() == TileType.None)
+                {
+                    btn.Image = null;
+                }
+                else if (tile.GetTileType() == TileType.Black)
+                {
+                    btn.Image = blackImg;
+                }
+                else if (tile.GetTileType() == TileType.Red)
+                {
+                    btn.Image = redImg;
+                }
             }
         }
-
-        public void removeChecker(Tile tile)
+        public ITile setTile(TileType type, int x, int y)
         {
-            setTile(new Tile(TileType.None, tile.x, tile.y));
+            ITile tile = null;
+            if (type == TileType.Black)
+            {
+                tile = new BlackTile(x,y);
+            }
+            else if (type == TileType.Red)
+            {
+                tile = new RedTile(x, y);
+            }
+            else if (type == TileType.None)
+            {
+                tile = new EmptyTile(x, y);
+            }
+
+            tiles[tile.GetY(), tile.GetX()] = tile;
+
+            if (Program.mainForm != null)
+            {
+                Button btn = getUiButton(tile.GetX(), tile.GetY());
+                if (tile.GetTileType() == TileType.None)
+                {
+                    btn.Image = null;
+                }
+                else if (tile.GetTileType() == TileType.Black)
+                {
+                    btn.Image = blackImg;
+                }
+                else if (tile.GetTileType() == TileType.Red)
+                {
+                    btn.Image = redImg;
+                }
+            }
+
+            return tile;
+        }
+
+        public void removeChecker(ITile tile)
+        {
+            setTile(new EmptyTile(tile.GetX(), tile.GetY()));
         }
 
         private Button getUiButton(int x, int y)
         {
-            return Program.mainForm.Buttons[y, x];
+            if(Program.mainForm != null)
+                return Program.mainForm.Buttons[y, x];
+            return null;
         }
 
         public void clearTable()
@@ -85,15 +137,15 @@ namespace Saskes
             }
         }
 
-        public Tile getTile(int x, int y)
+        public ITile getTile(int x, int y)
         {
             if(x >= 0 && x < tiles.GetLength(1) && y >= 0 && y < tiles.GetLength(0))
                 return tiles[y, x];
             return null;
         }
-        public Tile getTile(Tile tile)
+        public ITile getTile(ITile tile)
         {
-           Tile t= tiles[tile.y, tile.x];
+           ITile t= tiles[tile.GetY(), tile.GetX()];
             return t;
         }
 
@@ -104,19 +156,46 @@ namespace Saskes
             {
                 for (int u = 0; u < tiles.GetLength(1); u++)
                 {
-                    if (counts.ContainsKey(tiles[i,u].type))
+                    if (counts.ContainsKey(tiles[i,u].GetTileType()))
                     {
-                        counts[tiles[i, u].type]++;
+                        counts[tiles[i, u].GetTileType()]++;
                     }
                     else
                     {
-                        counts.Add(tiles[i, u].type, 1);
+                        counts.Add(tiles[i, u].GetTileType(), 1);
                     }
                 }
             }
            
 
             return counts;
+        }
+
+        // attTile[0] = left tile, attTile[1] = right tile
+        public ITile[] getCrossTiles(ITile tile, int direction)
+        {
+            ITile[] attTiles = new ITile[2];
+
+            attTiles[0] = tile.GetX() > 0 ? getTile(tile.GetX() - 1, tile.GetY() - direction) : null;
+            attTiles[1] = tile.GetX() < tiles.GetLength(1) ? getTile(tile.GetX() + 1, tile.GetY() - direction) : null;
+
+            return attTiles;
+        }
+
+        public List<ITile> getTilesByType(TileType type)
+        {
+            List<ITile> filteredTiles = new List<ITile>();
+            for (int i = 0; i < tiles.GetLength(0); i++)
+            {
+                for (int u = 0; u < tiles.GetLength(1); u++)
+                {
+                    if (tiles[i, u].GetTileType() == type)
+                    {
+                        filteredTiles.Add(tiles[i,u]);
+                    }
+                }
+            }
+            return filteredTiles;
         }
     }
 }
